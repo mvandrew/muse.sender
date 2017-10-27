@@ -1,0 +1,17 @@
+{
+  "name": "muse.sender",
+  "version": "1.0.0",
+  "description": "A script for sending Email on any hosting for the standard Adobe Muse forms.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "adobe",
+    "muse",
+    "php",
+    "phpmailer"
+  ],
+  "author": "Andrey Mishchenko",
+  "license": "MIT"
+}
