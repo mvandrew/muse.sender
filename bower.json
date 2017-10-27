@@ -12,7 +12,7 @@
     "php",
     "phpmailer"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/mvandrew/muse.sender#readme",
   "ignore": [
     "**/.*",
     "node_modules",

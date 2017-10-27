@@ -80,26 +80,26 @@ gulp.task('clear', function (done) {
 });
 
 
-//
-// Предварительная очистка каталога сборки
-//
+/**
+ * Clear the build folder.
+ */
 gulp.task( 'build-clean', function() {
     return del.sync( dirs.build );
 });
 
 
-//
-// Копирование файлов сборки
-//
+/**
+ * Copy the build files.
+ */
 gulp.task( 'build-copy', function() {
     return gulp.src( build_files )
         .pipe( gulp.dest( dirs.build + '/muse.sender' ) );
 } );
 
 
-//
-// Запуск процесса сборки пакета
-//
+/**
+ * Make the build.
+ */
 gulp.task( 'build', function() {
     return runSequence( 'build-clean', 'build-copy' );
 } );

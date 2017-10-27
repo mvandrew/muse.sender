@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvandrew/muse.sender.git"
+  },
   "keywords": [
     "adobe",
     "muse",
@@ -14,6 +18,10 @@
   ],
   "author": "Andrey Mishchenko",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mvandrew/muse.sender/issues"
+  },
+  "homepage": "https://github.com/mvandrew/muse.sender#readme",
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
