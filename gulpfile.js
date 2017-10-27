@@ -9,8 +9,33 @@ var gulp                = require("gulp"),
 var dirs = {
     src: './src/',
     dist: './',
-    build: './build/'
+    build: './_build'
 };
+
+
+var build_files = [
+    '**',
+    '!' + dirs.build,
+    '!' + dirs.build + '/**',
+    '!lib/config.php',
+    '!node_modules',
+    '!node_modules/**',
+    '!.git',
+    '!.git/**',
+    '!package.json',
+    '!package-lock.json',
+    '!**/*.arj',
+    '!**/*.rar',
+    '!**/*.zip',
+    '!.gitignore',
+    '!gulpfile.js',
+    '!LICENSE',
+    '!README.md',
+    '!bower.json',
+    '!.bowerrc',
+    '!src',
+    '!src/**'
+];
 
 
 /**
@@ -53,3 +78,28 @@ gulp.task('vendor-php', function () {
 gulp.task('clear', function (done) {
     return cache.clearAll(done);
 });
+
+
+//
+// Предварительная очистка каталога сборки
+//
+gulp.task( 'build-clean', function() {
+    return del.sync( dirs.build );
+});
+
+
+//
+// Копирование файлов сборки
+//
+gulp.task( 'build-copy', function() {
+    return gulp.src( build_files )
+        .pipe( gulp.dest( dirs.build + '/muse.sender' ) );
+} );
+
+
+//
+// Запуск процесса сборки пакета
+//
+gulp.task( 'build', function() {
+    return runSequence( 'build-clean', 'build-copy' );
+} );
