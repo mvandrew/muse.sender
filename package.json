@@ -13,5 +13,13 @@
     "phpmailer"
   ],
   "author": "Andrey Mishchenko",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "run-sequence": "^2.2.0"
+  }
 }

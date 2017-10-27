@@ -2,3 +2,5 @@
 node_modules
 src/vendor
 package-lock.json
+
+lib/config.php
